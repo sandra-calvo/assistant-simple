@@ -1,5 +1,5 @@
-<h1 align="center" style="border-bottom: none;">🚀 Watson Assistant (formerly Conversation) Sample Application</h1>
-<h3 align="center">This Node.js app demonstrates the Watson Assistant service in a simple interface engaging in a series of simple simulated banking tasks.</h3>
+<h1 align="center" style="border-bottom: none;">🚀 Watson Assistant Sample Application</h1>
+<h3 align="center">This Node.js app demonstrates the Watson Assistant service in a simple interface.</h3>
 <p align="center">
   <a href="http://travis-ci.org/watson-developer-cloud/assistant-simple">
     <img alt="Travis" src="https://travis-ci.org/watson-developer-cloud/assistant-simple.svg?branch=master">
@@ -14,45 +14,84 @@
 
 You can view a [demo][demo_url] of this app.
 
-Deploy to IBM Cloud:
-<a href="https://bluemix.net/deploy?repository=https://github.com/sandra-calvo/assistant-simple&branch=master"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
-
 
 ## Prerequisites
+Sign up for an [IBM Cloud account](https://console.bluemix.net/registration/).
 
-1. Sign up for an [IBM Cloud account](https://console.bluemix.net/registration/).
-1. Download the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#overview).
-1. Create an instance of the Watson Assistant service and get your credentials:
-    - Go to the [Watson Assistant](https://console.bluemix.net/catalog/services/conversation) page in the IBM Cloud Catalog.
-    - Log in to your IBM Cloud account.
-    - Click **Create**.
-    - Click **Show** to view the service credentials.
-    - Copy the `apikey` value, or copy the `username` and `password` values if your service instance doesn't provide an `apikey`.
-    - Copy the `url` value.
+## Develop your chatbot conversation
 
-## Configuring the application
+### Step 1. Create Watson Assistant service on IBM Cloud
+With IBM Watson™ Assistant service you can build a solution that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
 
-1. In your IBM Cloud console, open the Watson Assistant service instance
+Go to your IBM Cloud account and open the catalog. Look for Watson Assistant service and click on it.
 
-2. Click the **Import workspace** icon in the Watson Assistant service tool. Specify the location of the workspace JSON file in your local copy of the app project:
+<img src="/images/WA1.png" width="50%" height="50%">
+
+Choose the region and space where you want the service to be created. In new accounts it will automatically select your resource group, usually named as default. 
+You don't need to change the name if you don't want to, just click on 'Create'. 
+![](/images/WA2.png?raw=true)
+
+### Step 2. Import a conversation
+Once the service is created click on 'Launch tool' to access it. 
+
+<img src="/images/WA3.png" width="60%" height="60%">
+
+In the home tab you have videos and tutorials on how to get started building dialoges. Feel free to explore them. 
+Let's move to the Skills tab.
+
+<img src="/images/WA5b.png" width="50%" height="50%">
+ 
+
+The natural-language processing happens inside a skill, which is a container for all of the artifacts that define the conversation flow for an application.
+
+You can create a new skill and start from scratch or import an existing conversation. 
+
+Click the **Import workspace** icon in the Watson Assistant service tool. Specify the location of the workspace JSON file in your local copy of the app project:
 
     `<project_root>/training/bank_simple_workspace.json`
 
-3. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
+Download assistant conversation from here: https://ibm.box.com/v/assistantUI 
 
-4. Click the menu icon in the upper-right corner of the workspace tile, and then select **View details**.
+Click on the 'Create new' button and then click on the import skill tab.
 
-5. Click the ![Copy](readme_images/copy_icon.png) icon to copy the workspace ID to the clipboard.
+<img src="/images/WA6b.png" width="30%" height="30%">
 
-    ![Steps to get credentials](readme_images/assistant-simple.gif)
+When you import a skill, you can choose to import only the intents and entities, which can be useful if you want to build a new dialog using the same training data. In this case we will import everything. Click on 'Choose JSON file ' button and find the file you just downloaded. Then click on Import.
 
-6. In the application folder, copy the *.env.example* file and create a file called *.env*
+<img src="/images/WA7b.png" width="50%" height="50%">
 
-    ```
-    cp .env.example .env
-    ```
+### Step 3. Test your dialog
+As you make changes to your dialog, you can test it at any time to see how it responds to input.
+From the Dialog tab, click the conversation bubble icon. In the chat panel, type some text and then press Enter.
+Check the response to see if the dialog correctly interpreted your input and chose the right response. 
 
-7. Open the *.env* file and add the service credentials that you obtained in the previous step. The Watson SDK automaticaly locates the correct enviromental variables for either `username`, `password`, and `url` or the `apikey` and `url` credentials found in the *.env* file.
+The chat window indicates what intents and entities were recognized in the input. In the dialog editor pane, the currently active node is highlighted
+Feel free to create new intents for your bot.
+![](/images/WA8.png?raw=true)
+
+### Step 9. Get Watson Assistant credentials 
+Once you have tested the dialoge, it's time to collect the credentials to take them to our Node-RED application. 
+Click on the Skills name and go back to the Skills overview. 
+
+<img src="/images/WA-1.png" width="40%" height="40%">
+
+Click on the 3 dots in your Assistant to open a menu and then click on View API details. 
+
+<img src="/images/WA-2.png" width="40%" height="40%">
+
+Copy the credentials and save them for later. You will need the Workspace ID (skill), username ('apikey') and password. 
+
+<img src="/images/WA-3.png" width="60%" height="60%">
+
+## Deploy the application to IBM Cloud
+
+<a href="https://bluemix.net/deploy?repository=https://github.com/sandra-calvo/assistant-simple&branch=master"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
+
+## Configuring the application
+
+The application will not run till you enter your Watson Assitant credentials. Open the Git to see the application code. 
+
+Open the *.env* file and add the service credentials that you obtained in the previous step. The Watson SDK automaticaly locates the correct enviromental variables for either `username`, `password`, and `url` or the `apikey` and `url` credentials found in the *.env* file.
 
     Example *.env* file that configures the `apikey` and `url` for a Watson Assistant service instance hosted in the US East region:
 
@@ -86,13 +125,17 @@ Deploy to IBM Cloud:
     ASSISTANT_IAM_URL=https://gateway-syd.watsonplatform.net/assistant/api
     ```
 
-8. Add the `WORKSPACE_ID` to the previous properties
+7. Add the `WORKSPACE_ID` to the previous properties
 
     ```
     WORKSPACE_ID=522be-7b41-ab44-dec3-g1eab2ha73c6
     ```
+Once you commit the changes the application will start and you will be able to test your chatbot in your given URL. 
+To check the URL go to: 
 
 ## Running locally
+
+Clone the repository to your machine.
 
 1. Install the dependencies
 
@@ -100,13 +143,15 @@ Deploy to IBM Cloud:
     npm install
     ```
 
-1. Run the application
+2. Run the application
 
     ```
     npm start
     ```
 
-1. View the application in a browser at `localhost:3000`
+3. View the application in a browser at `localhost:3000`
+
+Make sure you modified the .env file with your own credentials. 
 
 ## Deploying to IBM Cloud as a Cloud Foundry Application
 
