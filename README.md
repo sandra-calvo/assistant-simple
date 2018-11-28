@@ -1,11 +1,6 @@
 <h1 align="center" style="border-bottom: none;">🚀 Watson Assistant Sample Application</h1>
 <h3 align="center">This Node.js app demonstrates the Watson Assistant service in a simple interface.</h3>
-<p align="center">
-  <a href="http://travis-ci.org/watson-developer-cloud/assistant-simple">
-    <img alt="Travis" src="https://travis-ci.org/watson-developer-cloud/assistant-simple.svg?branch=master">
-
-</p>
-</p>
+<p align="center"></p>
 
 ![Demo](readme_images/demo.gif)
 
