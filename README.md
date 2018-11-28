@@ -17,21 +17,21 @@ With IBM Watson™ Assistant service you can build a solution that understands n
 
 Go to your IBM Cloud account and open the catalog. Look for Watson Assistant service and click on it.
 
-<img src="/images/WA1.png" width="50%" height="50%">
+<img src="/readme_images/WA1.png" width="50%" height="50%">
 
 Choose the region and space where you want the service to be created. In new accounts it will automatically select your resource group, usually named as default. 
 You don't need to change the name if you don't want to, just click on 'Create'. 
-![](/images/WA2.png?raw=true)
+![](/readme_images/WA2.png?raw=true)
 
 ### Step 2. Import a conversation
 Once the service is created click on 'Launch tool' to access it. 
 
-<img src="/images/WA3.png" width="60%" height="60%">
+<img src="/readme_images/WA3.png" width="60%" height="60%">
 
 In the home tab you have videos and tutorials on how to get started building dialoges. Feel free to explore them. 
 Let's move to the Skills tab.
 
-<img src="/images/WA5b.png" width="50%" height="50%">
+<img src="/readme_images/WA5b.png" width="50%" height="50%">
  
 
 The natural-language processing happens inside a skill, which is a container for all of the artifacts that define the conversation flow for an application.
@@ -46,11 +46,11 @@ Download assistant conversation from here: https://ibm.box.com/v/assistantUI
 
 Click on the 'Create new' button and then click on the import skill tab.
 
-<img src="/images/WA6b.png" width="30%" height="30%">
+<img src="/readme_images/WA6b.png" width="30%" height="30%">
 
 When you import a skill, you can choose to import only the intents and entities, which can be useful if you want to build a new dialog using the same training data. In this case we will import everything. Click on 'Choose JSON file ' button and find the file you just downloaded. Then click on Import.
 
-<img src="/images/WA7b.png" width="50%" height="50%">
+<img src="/readme_images/WA7b.png" width="50%" height="50%">
 
 ### Step 3. Test your dialog
 As you make changes to your dialog, you can test it at any time to see how it responds to input.
@@ -59,21 +59,21 @@ Check the response to see if the dialog correctly interpreted your input and cho
 
 The chat window indicates what intents and entities were recognized in the input. In the dialog editor pane, the currently active node is highlighted
 Feel free to create new intents for your bot.
-![](/images/WA8.png?raw=true)
+![](/readme_images/WA8.png?raw=true)
 
 ### Step 9. Get Watson Assistant credentials 
 Once you have tested the dialoge, it's time to collect the credentials to take them to our Node-RED application. 
 Click on the Skills name and go back to the Skills overview. 
 
-<img src="/images/WA-1.png" width="40%" height="40%">
+<img src="/readme_images/WA-1.png" width="40%" height="40%">
 
 Click on the 3 dots in your Assistant to open a menu and then click on View API details. 
 
-<img src="/images/WA-2.png" width="40%" height="40%">
+<img src="/readme_images/WA-2.png" width="40%" height="40%">
 
 Copy the credentials and save them for later. You will need the Workspace ID (skill), username ('apikey') and password. 
 
-<img src="/images/WA-3.png" width="60%" height="60%">
+<img src="/readme_images/WA-3.png" width="60%" height="60%">
 
 ## Deploy the application to IBM Cloud
 
