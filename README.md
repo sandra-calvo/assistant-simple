@@ -14,6 +14,9 @@
 
 You can view a [demo][demo_url] of this app.
 
+Deploy to IBM Cloud:
+<a href="https://bluemix.net/deploy?repository=https://github.com/sandra-calvo/assistant-simple&branch=master"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
+
 
 ## Prerequisites
 
