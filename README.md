@@ -102,7 +102,7 @@ The organization, space and region will be automatically filled.
 
 Then click on Deploy. 
 
-<img src="/readme_images/WA-deploy.png" width="60%" height="60%">
+<img src="/readme_images/WA-deploy.png" width="90%" height="90%">
 
 ## Configuring the application
 
