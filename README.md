@@ -100,6 +100,8 @@ Click here to deploy the user interface of your bot:
 Click on "Create" to create an IBM Cloud API to connect the application with your account and services. 
 The organization, space and region will be automatically filled. 
 
+Note: If it takes too long to load the organization, space and region make sure you are deploying the application in an available region for your account. You can change the region under the toolchain name. 
+
 Then click on Deploy. 
 
 <img src="/readme_images/WA-deploy.png" width="90%" height="90%">
