@@ -1,4 +1,4 @@
-<h1 align="left" style="border-bottom: none;">🚀 Watson Assistant Sample Application</h1>
+<h1 align="left" style="border-bottom: none;">Watson Assistant - Sample Application</h1>
 <h3 align="left">This Node.js app demonstrates the Watson Assistant service in a simple interface.</h3>
 <p align="left"></p>
 
@@ -73,6 +73,7 @@ Check the response to see if the dialog correctly interpreted your input and cho
 
 The chat window indicates what intents and entities were recognized in the input. In the dialog editor pane, the currently active node is highlighted
 Feel free to create new intents for your bot.
+
 ![](/readme_images/WA8B.png?raw=true)
 
 ### Step 5. Get Watson Assistant credentials 
