@@ -1,6 +1,6 @@
-<h1 align="center" style="border-bottom: none;">🚀 Watson Assistant Sample Application</h1>
-<h3 align="center">This Node.js app demonstrates the Watson Assistant service in a simple interface.</h3>
-<p align="center"></p>
+<h1 align="left" style="border-bottom: none;">🚀 Watson Assistant Sample Application</h1>
+<h3 align="left">This Node.js app demonstrates the Watson Assistant service in a simple interface.</h3>
+<p align="left"></p>
 
 ![Demo](readme_images/demo.gif)
 
@@ -11,6 +11,8 @@ You can view a [demo][demo_url] of this app.
 Sign up for an [IBM Cloud account](https://console.bluemix.net/registration/).
 
 ## Develop your chatbot conversation
+
+Login to IBM Cloud. 
 
 ### Step 1. Create Watson Assistant service on IBM Cloud
 With IBM Watson™ Assistant service you can build a solution that understands natural-language input and uses machine learning to respond to customers in a way that simulates a conversation between humans.
@@ -48,12 +50,21 @@ When you import a skill, you can choose to import only the intents and entities,
 <img src="/readme_images/WA7b.png" width="50%" height="50%">
 
 ### Step 3. Understand how Watson Assitant works
+IBM Watson™ Assistant is a cognitive bot that you can customize for your business needs, and deploy across multiple channels to bring help to your customers where and when they need it.
 
-    Intents: The actions the Pharaoh might want to take (think verbs here).
-    Entities: The things Rameses II might ask for or select, such as a monument type or a feast type or a battle site (similarly, think nouns).
-    Dialogs: The interactions (or conversations, if you like) between the king and your chatbot. You’ll use dialogs to identify intents and entities from the king’s input.
+**Dialog skill**
 
-The pharaoh will interact with your chatbot through dialogs. When the chatbot identifies the king’s intent and all of the entities needed for that intent, it says “Long live the king” or something similar. After that, we’ll agree to imagine that the chatbot delivers the king’s request to the Royal IT Department for implementation.
+Create a dialog skill. Use the intuitive graphical tool to define the training data and dialog for the conversation between your assistant and your customers. In this lab we imported a sample conversation. 
+
+The training data consists of the following artifacts:
+
+**Intents:** Goals that you anticipate your users will have when they interact with the service. Define one intent for each goal that can be identified in a user's input. For example, you might define an intent named store_hours that answers questions about store hours. For each intent, you add sample utterances that reflect the input customers might use to ask for the information they need, such as, What time do you open?
+You can also use prebuilt content catalogs provided by IBM to get started with data that addresses common customer goals.
+
+**Entities:** An entity represents a term or object that provides context for an intent. For example, an entity might be a city name that helps your dialog to distinguish which store the user wants to know store hours for.
+As you add training data, a natural language classifier is automatically added to the skill, and is trained to understand the types of requests that you have indicated the service should listen for and respond to.
+
+**Dialog:** Use the dialog tool to build a dialog flow that incorporates your intents and entities. The dialog flow is represented graphically in the tool as a tree. You can add a branch to process each of the intents that you want the service to handle. You can then add branch nodes that handle the many possible permutations of a request based on other factors, such as the entities found in the user input or information that is passed to the service from an external service.
 
 ### Step 4. Test your dialog
 As you make changes to your dialog, you can test it at any time to see how it responds to input.
@@ -65,7 +76,8 @@ Feel free to create new intents for your bot.
 ![](/readme_images/WA8.png?raw=true)
 
 ### Step 5. Get Watson Assistant credentials 
-Once you have tested the dialoge, it's time to collect the credentials to take them to our Node-RED application. 
+Once you have tested the dialoge, it's time to collect the credentials. You will need them to connect the web application in future steps to your chatbot. 
+
 Click on the Skills name and go back to the Skills overview. 
 
 <img src="/readme_images/WA-1.png" width="40%" height="40%">
@@ -79,6 +91,8 @@ Copy the credentials and save them for later. You will need the Workspace ID (sk
 <img src="/readme_images/WA-3.png" width="60%" height="60%">
 
 ## Deploy the application to IBM Cloud
+
+Click here to deploy the user interface of your bot:
 
 <a href="https://bluemix.net/deploy?repository=https://github.com/sandra-calvo/assistant-simple&branch=master"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
 
