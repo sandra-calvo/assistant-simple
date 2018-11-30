@@ -107,8 +107,13 @@ Then click on Deploy.
 ## Configuring the application
 
 The application will not run till you enter your Watson Assitant credentials. Open the Git to see the application code. 
+Click on "GIT" to access your application repository.
+
+<img src="/readme_images/WA-deploy2.png" width="70%" height="70%">
 
 Open the *.env* file and add the service credentials that you obtained in the previous step. The Watson SDK automatically locates the correct environment variables for either `username`, `password`, and `url` or the `apikey` and `url` credentials found in the *.env* file.
+
+<img src="/readme_images/WA-deploy3.png" width="60%" height="60%">
 
     Example *.env* file that configures the `apikey` and `url` for a Watson Assistant service instance hosted in the US East region:
 
