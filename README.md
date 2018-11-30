@@ -97,6 +97,13 @@ Click here to deploy the user interface of your bot:
 
 <a href="https://bluemix.net/deploy?repository=https://github.com/sandra-calvo/assistant-simple&branch=master"><img src="https://bluemix.net/deploy/button.png" alt="Deploy to IBM Cloud"></a>
 
+Click on "Create" to create an IBM Cloud API to connect the application with your account and services. 
+The organization, space and region will be automatically filled. 
+
+Then click on Deploy. 
+
+<img src="/readme_images/WA-deploy.png" width="60%" height="60%">
+
 ## Configuring the application
 
 The application will not run till you enter your Watson Assitant credentials. Open the Git to see the application code. 
