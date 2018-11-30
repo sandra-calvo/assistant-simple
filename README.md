@@ -47,7 +47,15 @@ When you import a skill, you can choose to import only the intents and entities,
 
 <img src="/readme_images/WA7b.png" width="50%" height="50%">
 
-### Step 3. Test your dialog
+### Step 3. Understand how Watson Assitant works
+
+    Intents: The actions the Pharaoh might want to take (think verbs here).
+    Entities: The things Rameses II might ask for or select, such as a monument type or a feast type or a battle site (similarly, think nouns).
+    Dialogs: The interactions (or conversations, if you like) between the king and your chatbot. You’ll use dialogs to identify intents and entities from the king’s input.
+
+The pharaoh will interact with your chatbot through dialogs. When the chatbot identifies the king’s intent and all of the entities needed for that intent, it says “Long live the king” or something similar. After that, we’ll agree to imagine that the chatbot delivers the king’s request to the Royal IT Department for implementation.
+
+### Step 4. Test your dialog
 As you make changes to your dialog, you can test it at any time to see how it responds to input.
 From the Dialog tab, click the conversation bubble icon. In the chat panel, type some text and then press Enter.
 Check the response to see if the dialog correctly interpreted your input and chose the right response. 
@@ -56,7 +64,7 @@ The chat window indicates what intents and entities were recognized in the input
 Feel free to create new intents for your bot.
 ![](/readme_images/WA8.png?raw=true)
 
-### Step 4. Get Watson Assistant credentials 
+### Step 5. Get Watson Assistant credentials 
 Once you have tested the dialoge, it's time to collect the credentials to take them to our Node-RED application. 
 Click on the Skills name and go back to the Skills overview. 
 
@@ -78,7 +86,7 @@ Copy the credentials and save them for later. You will need the Workspace ID (sk
 
 The application will not run till you enter your Watson Assitant credentials. Open the Git to see the application code. 
 
-Open the *.env* file and add the service credentials that you obtained in the previous step. The Watson SDK automaticaly locates the correct enviromental variables for either `username`, `password`, and `url` or the `apikey` and `url` credentials found in the *.env* file.
+Open the *.env* file and add the service credentials that you obtained in the previous step. The Watson SDK automatically locates the correct environment variables for either `username`, `password`, and `url` or the `apikey` and `url` credentials found in the *.env* file.
 
     Example *.env* file that configures the `apikey` and `url` for a Watson Assistant service instance hosted in the US East region:
 
