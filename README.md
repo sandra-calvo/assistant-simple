@@ -147,13 +147,16 @@ Open the *.env* file and add the service credentials that you obtained in the pr
     ASSISTANT_IAM_URL=https://gateway-syd.watsonplatform.net/assistant/api
     ```
 
-7. Add the `WORKSPACE_ID` to the previous properties
+Click "Edit" to add your Watson Assistant credentials.
 
-    ```
-    WORKSPACE_ID=522be-7b41-ab44-dec3-g1eab2ha73c6
-    ```
+<img src="/readme_images/WA-deploy4.png" width="50%" height="50%">
+
+You will need to provide the workspace ID, and username & password. Then click on the green button "Commit changes".
+
 Once you commit the changes the application will start and you will be able to test your chatbot in your given URL. 
-To check the URL go to: 
+You can go back to IBM Cloud (www.bluemix.net) and wait for your application to start. 
+
+Once it is running you can click on the application name and then "Visit app URL" to start chatting with your bot. 
 
 ## Running locally
 
