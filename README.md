@@ -32,17 +32,12 @@ In the home tab you have videos and tutorials on how to get started building dia
 Let's move to the Skills tab.
 
 <img src="/readme_images/WA5b.png" width="50%" height="50%">
- 
 
 The natural-language processing happens inside a skill, which is a container for all of the artifacts that define the conversation flow for an application.
 
 You can create a new skill and start from scratch or import an existing conversation. 
 
-Click the **Import workspace** icon in the Watson Assistant service tool. Specify the location of the workspace JSON file in your local copy of the app project:
-
-    `<project_root>/training/bank_simple_workspace.json`
-
-Download assistant conversation from here: https://ibm.box.com/v/assistantUI 
+Download a conversation from here: https://ibm.box.com/v/bank-conversation 
 
 Click on the 'Create new' button and then click on the import skill tab.
 
@@ -61,7 +56,7 @@ The chat window indicates what intents and entities were recognized in the input
 Feel free to create new intents for your bot.
 ![](/readme_images/WA8.png?raw=true)
 
-### Step 9. Get Watson Assistant credentials 
+### Step 4. Get Watson Assistant credentials 
 Once you have tested the dialoge, it's time to collect the credentials to take them to our Node-RED application. 
 Click on the Skills name and go back to the Skills overview. 
 
