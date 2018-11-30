@@ -73,7 +73,7 @@ Check the response to see if the dialog correctly interpreted your input and cho
 
 The chat window indicates what intents and entities were recognized in the input. In the dialog editor pane, the currently active node is highlighted
 Feel free to create new intents for your bot.
-![](/readme_images/WA8.png?raw=true)
+![](/readme_images/WA8B.png?raw=true)
 
 ### Step 5. Get Watson Assistant credentials 
 Once you have tested the dialoge, it's time to collect the credentials. You will need them to connect the web application in future steps to your chatbot. 
